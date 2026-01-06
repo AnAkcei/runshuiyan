@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>聯絡我們｜潤水燕</title>
+  <meta name="description" content="聯絡潤水燕，取得產品與門市諮詢。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="logo/LOGO.png" type="image/png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="logo/LOGO.png" alt="潤水燕品牌標誌">
+        <span class="brand-name">潤水燕</span>
+      </a>
+      <button class="nav-toggle" aria-label="切換選單" aria-expanded="false">☰</button>
+      <nav class="site-nav">
+        <a href="index.html">首頁</a>
+        <a href="products.html">產品介紹</a>
+        <a href="about.html">關於我們</a>
+        <a href="birdnest.html">關於燕窩</a>
+        <a href="contact.html" class="cta-link">聯絡我們</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>聯絡我們</h1>
+      <p class="lead">填寫表單或使用聯絡方式，我們將盡快回覆。</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="section contact-grid">
+      <div class="contact-card">
+        <form id="contact-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">姓名</label>
+              <input id="name" name="name" placeholder="您的姓名" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">電話</label>
+              <input id="phone" name="phone" placeholder="您的電話">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="您的Email" required>
+            </div>
+            <div class="form-field">
+              <label for="subject">主題</label>
+              <select id="subject" name="subject">
+                <option value="產品諮詢">產品諮詢</option>
+                <option value="門市資訊">門市資訊</option>
+                <option value="合作洽談">合作洽談</option>
+                <option value="其他">其他</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="message">訊息內容</label>
+            <textarea id="message" name="message" rows="6" placeholder="請描述您的需求" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">送出</button>
+            <a class="btn ghost" href="mailto:service@runshuiyan.example">Email 聯絡</a>
+          </div>
+          <div class="note">送出表單後系統將顯示確認訊息。</div>
+        </form>
+      </div>
+      <div class="contact-card">
+        <h3>聯絡資訊</h3>
+        <p>客服信箱：service@runshuiyan.example</p>
+        <p>客服專線：02-0000-0000</p>
+        <h3>臻選門市</h3>
+        <p>台北市信義區松智路17號B2｜微風南山</p>
+        <p>台北市松山區復興南路一段39號B1｜微風廣場</p>
+        <p>台北市信義區松高路19號B1｜新光三越信義A4</p>
+        <p>台北市士林區天母東路68號A棟B1｜新光三越天母</p>
+        <p>新北市新店區中興路三段70號B1｜誠品新店裕隆城</p>
+        <p>台北市中山區樂群三路200號5樓｜大直忠泰樂生活</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo/LOGO.png" alt="潤水燕品牌標誌">
+        <div>
+          <div class="brand-name">潤水燕</div>
+          <div class="brand-slogan">貨真價實，就是最好</div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="products.html">產品介紹</a>
+        <a href="about.html">關於我們</a>
+        <a href="birdnest.html">關於燕窩</a>
+        <a href="contact.html">聯絡我們</a>
+      </div>
+      <div class="footer-copy">© 2026 潤水燕. 保留所有權利。</div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
