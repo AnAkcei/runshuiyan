@@ -1,14 +1,41 @@
 const navToggle = document.querySelector('.nav-toggle');
 const siteNav = document.querySelector('.site-nav');
+const backdrop = document.querySelector('.nav-backdrop');
+const bodyEl = document.body;
 if (navToggle && siteNav) {
+  const closeNav = () => {
+    siteNav.classList.remove('open');
+    backdrop && backdrop.classList.remove('show');
+    navToggle.setAttribute('aria-expanded', 'false');
+    bodyEl.classList.remove('nav-open');
+  };
+  const openNav = () => {
+    siteNav.classList.add('open');
+    backdrop && backdrop.classList.add('show');
+    navToggle.setAttribute('aria-expanded', 'true');
+    bodyEl.classList.add('nav-open');
+  };
   navToggle.addEventListener('click', () => {
-    const open = siteNav.style.display === 'flex';
-    siteNav.style.display = open ? 'none' : 'flex';
-    navToggle.setAttribute('aria-expanded', (!open).toString());
+    const isOpen = siteNav.classList.contains('open');
+    isOpen ? closeNav() : openNav();
+  });
+  backdrop && backdrop.addEventListener('click', closeNav);
+  siteNav.addEventListener('click', (e) => {
+    const t = e.target;
+    if (t && t.tagName === 'A') closeNav();
   });
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) siteNav.style.display = 'flex';
-    else siteNav.style.display = 'none';
+    if (window.innerWidth > 768) {
+      siteNav.classList.remove('open');
+      backdrop && backdrop.classList.remove('show');
+      bodyEl.classList.remove('nav-open');
+      siteNav.style.display = 'flex';
+    } else {
+      siteNav.style.display = '';
+    }
+  });
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeNav();
   });
 }
 
